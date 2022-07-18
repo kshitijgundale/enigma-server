@@ -1,0 +1,6 @@
+flask
+pymongo[srv]
+certifi
+python-dotenv
+wtforms
+flask-jwt-extended

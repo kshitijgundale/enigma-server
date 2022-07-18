@@ -1,0 +1,12 @@
+# My Variables
+@contentType = application/json
+
+### POST Request
+POST http://localhost:5000/login
+Content-Type: {{contentType}}
+
+{
+    "email": "kshitijgundale08@gmail.com",
+    "password": "pass",
+    "confirm": "pass"
+}
