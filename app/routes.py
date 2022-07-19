@@ -44,7 +44,7 @@ def login():
         if user and check_password_hash(user['password_hash'], form.data['password']):
             access_token = create_access_token(identity=form.data['email'])
             refresh_token = create_refresh_token(identity=form.data['email'])
-            response = jsonify(access_token=access_token)
+            response = jsonify(email=user['email'], username=user['username'])
             set_access_cookies(response, access_token)
             set_refresh_cookies(response, refresh_token)
             return response, 201
