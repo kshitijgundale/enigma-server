@@ -4,3 +4,4 @@ certifi
 python-dotenv
 wtforms
 flask-jwt-extended
+flask-cors

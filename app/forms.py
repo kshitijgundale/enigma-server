@@ -1,4 +1,4 @@
-from wtforms import Form, validators, PasswordField, EmailField, StringField
+from wtforms import Form, validators, PasswordField, EmailField, StringField, StringField, TextAreaField
 from werkzeug.datastructures import MultiDict
 
 class FlaskForm(Form):
@@ -21,3 +21,7 @@ class SignUpForm(LoginForm):
         validators.EqualTo('password')
     ])
     username = StringField("username", validators=[validators.InputRequired()])
+
+class WorkspaceForm(FlaskForm):
+    name = StringField("email", validators=[validators.InputRequired()])
+    description = TextAreaField("description", validators=[validators.InputRequired()])
